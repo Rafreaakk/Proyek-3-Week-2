@@ -1,0 +1,14 @@
+{
+  "nama": "Hilmi",
+  "bio": "Mahasiswa D3 Teknik Informatika yang antusias belajar JavaScript, DOM, dan Fetch API. Fokus merakit antarmuka web interaktif yang responsif dan terstruktur.",
+  "keterampilan": [
+    {
+      "id": 1700000000001,
+      "nama": "HTML & CSS Dasar"
+    },
+    {
+      "id": 1700000000002,
+      "nama": "Vanilla JavaScript"
+    }
+  ]
+}

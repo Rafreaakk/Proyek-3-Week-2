@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Interaktif</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <!-- 1. Navigasi & 7. Tema -->
+  <header>
+    <div class="logo">MyPorto</div>
+    <button id="btn-tema" aria-label="Ganti Tema">Ganti Tema</button>
+    <button id="btn-menu" aria-expanded="false" aria-controls="nav-links">☰ Menu</button>
+    <nav id="nav-links" class="nav-links hidden">
+      <a href="#karya">Karya</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 2. Daftar Dinamis & 3. Filter -->
+    <section id="karya">
+      <h2>Portofolio Layanan</h2>
+      <select id="filter-kategori" aria-label="Filter Kategori">
+        <option value="semua">Semua Kategori</option>
+        <option value="web">Web Development</option>
+        <option value="desain">Desain Grafis</option>
+      </select>
+      <div id="status-karya" aria-live="polite"></div>
+      <div id="portofolio-container" class="grid-container"></div>
+    </section>
+
+    <!-- 4. FAQ Accordion -->
+    <section id="faq">
+      <h2>Pertanyaan Umum</h2>
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">Berapa lama waktu pengerjaan?</button>
+        <div class="faq-answer hidden"><p>Tergantung kompleksitas, rata-rata 1-2 minggu.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">Apakah ada revisi?</button>
+        <div class="faq-answer hidden"><p>Ya, revisi gratis maksimal 2 kali untuk UI/UX.</p></div>
+      </div>
+    </section>
+
+    <!-- 5. Form Validasi -->
+    <section id="kontak">
+      <h2>Hubungi Saya</h2>
+      <form id="form-kontak" novalidate>
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" autocomplete="name">
+        <small id="error-nama" class="error"></small>
+
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan"></textarea>
+        <small id="error-pesan" class="error"></small>
+
+        <button type="submit">Kirim Pesan</button>
+        <div id="status-form" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <!-- 6. Kembali ke atas -->
+  <footer>
+    <button id="btn-top">Kembali ke Atas</button>
+  </footer>
+</body>
+</html>
